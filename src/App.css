@@ -1,1 +1,14 @@
 /* Make stuff look good :D */
+.footer{
+  color:blue;
+  font-size:14px;
+}
+
+.header ul{
+ list-style-type: none;
+ background-color:cyan;
+ color:blue;  
+ display: flex;
+ justify-content:space-around;
+ font-size:20px;
+}

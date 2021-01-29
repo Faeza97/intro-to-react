@@ -1,16 +1,27 @@
-import React  from 'React'
+import React  from 'react'
 import logo from '../logo.svg'
   export default class Main extends React.Component {
-    var [s , sets] = React.useState(0); 
+    
+constructor() {
+    super()
+    this.state = {
+      count: 0
+    }
+  }
+     
     render() {
       return (
         <div>
-          <img src = {logo} />
+          <img src={logo} />
           <h3>React is awsome!! </h3>
+          <h1>number:{this.state.count}</h1>
           <button onClick={()=>{
-            sets(s++);
+            const newCount = this.state.count + 1
+        this.setState({
+      count: newCount
+    })
           } }>Add count </button>
-          <h1>{s}</h1>
+          
         </div>  
       )
     }

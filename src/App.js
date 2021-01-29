@@ -1,18 +1,34 @@
 import React from 'react';
 import './App.css';
+import Header from './components/Header'
+import Main from './components/Main'
+import Footer from './components/Footer'
 
-// const contactData = {
-//   email: 'info@gmail.com',
-//   address: 'Montreal, Canada',
-//   phone: '+966666666666',
-// };
+
+
+
+// // Pass this list so that it gets rendered in the Header component.
+const navItems = ["Home","Projects","About","Contact"]
+
+  const contactData = {
+  email: 'info@gmail.com',
+  address: 'Montreal, Canada',
+  phone: '+966666666666',
+};
 
 function App() {
 
   return (
+    <center>
     <div className="App">
- 
+   <Header lables={navItems} ></Header>
+    <Main />
+    <Footer contactData = {contactData} />
     </div>
+    <button onClick={()=>{
+      console.log(contactData)
+    }}>sub</button>
+    </center>
   );
 }
   // What you should do ?
